@@ -2,50 +2,44 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import img from "../../my-app/app/fonts/Images/hackercup.png"
-import Codechef from "../../my-app/app/fonts/Images/Codechef.png"
-import LeetCode from "../../my-app/app/fonts/Images/LC.png"
-import icpc from "../../my-app/app/fonts/Images/icpc.png"
-import openCV from "../../my-app/app/fonts/Images/Opencv.png"
-import top_scr from "../../my-app/app/fonts/Images/top_scorer.png"
 
 const categories = ["All", "Competitve Programming", "Machine Learning", "Web development"]
 
 const projects = [
   {
-    title: "Secured #1740  Rank globally",
+    title: "Secured #1740 Rank globally",
     category: "Competitve Programming",
-    image: img,
+    image: "/images/hackercup.png",
     link: "https://www.facebook.com/codingcompetitions/hacker-cup/2024/certificate/428155079907254?source=facebook",
   },
   {
     title: "Top Scorer",
     category: "Web development",
-    image:top_scr,
+    image: "/images/top_scorer.png",
     link: "https://github.com/Prasoon-kushwaha/top_scorer",
   },
   {
-    title: "OpenCV Attendence",
+    title: "OpenCV Attendance",
     category: "Machine Learning",
-    image: openCV,
+    image: "/images/Opencv.png",
     link: "https://github.com/Prasoon-kushwaha/OpenCV_Attendence",
   },
   {
-    title: "Rated 1742 among top 5% Global ",
+    title: "Rated 1742 among top 5% Global",
     category: "Competitve Programming",
-    image: Codechef,
-    link: "https://www.codechef.com/users/prasoonkushwah"
-   },
+    image: "/images/Codechef.png",
+    link: "https://www.codechef.com/users/prasoonkushwah",
+  },
   {
     title: "ICPC Regionalist among top 200 teams in India",
     category: "Competitve Programming",
-    image: icpc,
+    image: "/images/icpc.png",
     link: "#",
   },
   {
     title: "Over 500 problems solved",
     category: "Data Structures",
-    image: LeetCode,
+    image: "/images/LC.png",
     link: "https://leetcode.com/u/Random-Variable/",
   },
 ]
@@ -102,4 +96,3 @@ export default function Achievement() {
     </div>
   )
 }
-
