@@ -1,101 +1,112 @@
-import Image from "next/image";
+"use client"
+
+import { useState } from "react"
+import Sidebar from "../components/Sidebar"
+import Navbar from "../components/Navbar"
+import About from "../components/About"
+import Resume from "../components/Resume"
+import Achievement from "../components/Achievement"
+import Blog from "../components/Blog"
+import Contact from "../components/Contact"
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [activePage, setActivePage] = useState("about")
+  const [showContacts, setShowContacts] = useState(true)
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const renderActivePage = () => {
+    switch (activePage) {
+      case "about":
+        return <About />
+      case "resume":
+        return <Resume />
+      case "achievement":
+        return <Achievement />
+      case "blog":
+        return <Blog />
+      case "contact":
+        return <Contact />
+      default:
+        return <About />
+    }
+  }
+
+  return (
+    <main className="min-h-screen bg-[#1a1a1a] p-4 pb-32 md:p-6 lg:p-8">
+      <div className="max-w-7xl mx-auto md:flex md:gap-6">
+        {/* Sidebar */}
+        <div className="hidden md:block md:w-[400px] shrink-0 md:sticky md:top-6 md:self-start">
+          <div className="bg-[#2a2a2a] rounded-2xl p-8">
+            <div className="text-center mb-8">
+              <div className="w-32 h-32 mx-auto mb-6 bg-[#333] rounded-2xl overflow-hidden">
+                <img
+                  src="https://avatars.githubusercontent.com/u/73454209?v=4"
+                  alt="Profile"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h1 className="text-2xl font-bold text-white mb-2">Prasoon Kushwaha</h1>
+              <div className="inline-block bg-[#333] px-4 py-2 rounded-full">
+                <p className="text-gray-300">Web developer</p>
+              </div>
+              <div className="inline-block bg-[#333] px-4 py-2 my-2 rounded-full">
+                <p className="text-gray-300">Competitve Programmer</p>
+              </div>
+            </div>
+            <Sidebar />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+
+        {/* Mobile Profile Card */}
+        <div className="md:hidden relative bg-[#2a2a2a] rounded-2xl p-6 mb-4">
+          <button
+            onClick={() => setShowContacts(!showContacts)}
+            className="absolute right-4 top-4 px-4 py- text-[#ffd700] hover:text-[#ffd700]/80 transition-colors text-sm"
+          >
+            {showContacts ? "Hide Contacts" : "Show Contacts"}
+            
+          </button>
+          <div className="flex items-center gap-6">
+            <div className="w-44 h-24 rounded-2xl overflow-hidden bg-[#333]">
+              <img
+                src="https://avatars.githubusercontent.com/u/73454209?v=4"
+                //     alt="Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h1 className="text-xl font-bold text-white mb-2 my-4">Prasoon Kushwaha</h1>
+              <div className="inline-block bg-[#333] px-4 py-2 my-2 rounded-full ">
+                <p className="text-gray-300 text-sm">Web developer</p>
+              </div>
+              <div className="inline-block bg-[#333] text-sm px-4 py-2 rounded-full">
+                <p className="text-gray-300">competitve programmer</p>
+              </div>
+            </div>
+          </div>
+          {showContacts && <Sidebar className="mt-6" />}
+        </div>
+
+        {/* Main Content Area */}
+        <div className="flex-grow md:w-[calc(100%-432px)]">
+          {/* Desktop Navigation */}
+          <div className="hidden md:block mb-6">
+            <div className="bg-[#2a2a2a] rounded-2xl w-[53.5vw]">
+              <Navbar setActivePage={setActivePage} activePage={activePage} />
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="bg-[#2a2a2a] rounded-2xl overflow-hidden">
+            <div className="md:h-[calc(100vh-8rem)] overflow-y-auto">{renderActivePage()}</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className="md:hidden">
+        <Navbar setActivePage={setActivePage} activePage={activePage} />
+      </div>
+    </main>
+  )
 }
+
