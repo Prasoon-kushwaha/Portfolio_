@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import { Code, Smartphone, Camera, Layout, ServerCrash } from "lucide-react";
+import { Code, Smartphone, Layout, ServerCrash } from "lucide-react";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 

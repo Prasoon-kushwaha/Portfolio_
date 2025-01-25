@@ -1,4 +1,4 @@
-import { Mail, Phone, Calendar, MapPin } from "lucide-react"
+import { Mail, Calendar, MapPin } from "lucide-react"
 
 interface SidebarProps {
   className?: string
