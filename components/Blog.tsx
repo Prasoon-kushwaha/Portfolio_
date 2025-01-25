@@ -14,31 +14,31 @@ const blogPosts: BlogPost[] = [
     date: "2025-01-25",
     excerpt: "Learn key strategies and techniques to optimize your code during competitive programming contests.",
     content:
-      "When it comes to competitive programming, efficiency is key. It's not just about solving the problem, but solving it quickly and within the given time constraints. Optimizing your code involves various strategies that can help reduce time and space complexity, making your solution faster and more scalable.\n\n" +
+      "When it comes to competitive programming, efficiency is key. It&#39s not just about solving the problem, but solving it quickly and within the given time constraints. Optimizing your code involves various strategies that can help reduce time and space complexity, making your solution faster and more scalable.\n\n" +
       "### 1. **Choosing the Right Algorithm**\n" +
       "The first step in optimizing your code is choosing the most efficient algorithm for the task at hand. For instance, instead of using brute force methods, look for algorithms that minimize the number of operations. Consider using dynamic programming, divide and conquer, or greedy algorithms where applicable.\n\n" +
       "### 2. **Data Structures Matter**\n" +
-      "Using the right data structure can have a huge impact on your code's performance. For example, choosing a hash map for quick lookups or a priority queue for handling dynamic data can save time. Avoid using linear data structures like arrays or lists if you require frequent insertion or deletion operations.\n\n" +
+      "Using the right data structure can have a huge impact on your code&#39s performance. For example, choosing a hash map for quick lookups or a priority queue for handling dynamic data can save time. Avoid using linear data structures like arrays or lists if you require frequent insertion or deletion operations.\n\n" +
       "### 3. **Avoiding Unnecessary Computations**\n" +
-      "It's easy to get caught up in recalculating things you’ve already computed. Memoization or caching intermediate results is an essential technique in competitive programming. Storing results for future reference can save time, especially when you deal with recursive problems.\n\n" +
+      "It&#39s easy to get caught up in recalculating things you’ve already computed. Memoization or caching intermediate results is an essential technique in competitive programming. Storing results for future reference can save time, especially when you deal with recursive problems.\n\n" +
       "### 4. **Time Complexity and Space Complexity**\n" +
       "Always analyze the time and space complexity of your solution. Aim for algorithms with lower time complexity (O(log n), O(n log n), etc.) and space complexity. If your solution requires a large amount of memory, consider using space-efficient techniques like in-place algorithms.\n\n" +
       "### 5. **Understanding the Problem Statement Thoroughly**\n" +
-      "It's tempting to jump straight into coding, but understanding the problem statement is crucial. Break down the problem and look for edge cases that might affect your solution's performance. This can help you avoid unnecessary computations or bottlenecks.\n\n" +
+      "It&#39s tempting to jump straight into coding, but understanding the problem statement is crucial. Break down the problem and look for edge cases that might affect your solution&#39s performance. This can help you avoid unnecessary computations or bottlenecks.\n\n" +
       "### 6. **Code Optimization Techniques**\n" +
       "There are various coding techniques you can use to make your code more efficient, such as:\n" +
       "- **Input/Output Optimization**: In many contests, fast input/output is critical. Using faster I/O functions (like `scanf`/`printf` in C/C++ or `sys.stdin`/`sys.stdout` in Python) can save time.\n" +
       "- **Loop Unrolling**: Reduce the overhead of looping by manually unrolling loops in performance-critical sections.\n" +
       "- **Bit Manipulation**: Bitwise operations are often faster than regular arithmetic operations, especially for tasks like checking even/odd or calculating powers of 2.\n\n" +
       "**Conclusion**:\n" +
-      "Optimizing code in competitive programming is not just about writing the shortest code, but writing the most efficient code. By choosing the right algorithms, using appropriate data structures, avoiding unnecessary computations, and applying time and space optimizations, you can improve your performance in programming contests. Keep practicing these techniques, and soon you'll find yourself solving problems faster and more efficiently."
+      "Optimizing code in competitive programming is not just about writing the shortest code, but writing the most efficient code. By choosing the right algorithms, using appropriate data structures, avoiding unnecessary computations, and applying time and space optimizations, you can improve your performance in programming contests. Keep practicing these techniques, and soon you&#39ll find yourself solving problems faster and more efficiently."
   },
   {
     title: "ICPC Regionals 2024 - Amritapuri (Experience)",
     date: "2025-01-04",
     excerpt: "A detailed experience of participating in the ICPC Regionals at Amritapuri, sharing insights and takeaways.",
     content:
-      "Participating in the ICPC Regionals at Amritapuri was an unforgettable experience. The competition atmosphere was electric, and the challenges were both thrilling and intense. Here's a summary of my journey.\n\n" +
+      "Participating in the ICPC Regionals at Amritapuri was an unforgettable experience. The competition atmosphere was electric, and the challenges were both thrilling and intense. Here&#39s a summary of my journey.\n\n" +
       "### 1. **The Venue**\n" +
       "The event was hosted at Amritapuri, and the venue was nothing short of impressive. The campus was bustling with energy, and the event hall was perfectly arranged for the competition. The energy from fellow participants and volunteers made the experience truly remarkable.\n\n" +
       "### 2. **The Preparation**\n" +

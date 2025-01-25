@@ -6,7 +6,7 @@ import rehypeHighlight from "rehype-highlight";
 export default function About() {
   const aboutMeMarkdown = `
   
-  I'm a **6th-semester Computer Science student** and an aspiring **Software Development Engineer** at **IIIT Una**, India.
+  I&#39m a **6th-semester Computer Science student** and an aspiring **Software Development Engineer** at **IIIT Una**, India.
   
   I specialize in:
   
@@ -72,13 +72,13 @@ export default function About() {
         </div>
       </section>
 
-      {/* What I'm Working On Section */}
+      {/* What I&#39m Working On Section */}
       <section>
         <h2
           className="text-2xl font-bold text-white mb-8 animate-slide-in"
           style={{ animationDelay: "0.3s" }}
         >
-          What I'm Working On
+          "What I&#39m Working On"
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
