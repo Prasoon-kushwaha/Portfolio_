@@ -63,8 +63,7 @@ export default function About() {
         <div className="space-y-6 text-gray-300">
           <ReactMarkdown
             className="markdown text-gray-300 animate-slide-in"
-            style={{ animationDelay: "0.1s" }}
-            remarkPlugins={[remarkGfm]}
+             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeHighlight]}
           >
             {aboutMeMarkdown}
@@ -76,7 +75,6 @@ export default function About() {
       <section>
         <h2
           className="text-2xl font-bold text-white mb-8 animate-slide-in"
-          style={{ animationDelay: "0.3s" }}
         >
           "What I&#39m Working On"
         </h2>
@@ -85,7 +83,6 @@ export default function About() {
             <div
               key={index}
               className="bg-[#2f2f2f] rounded-xl p-6 animate-scale-in"
-              style={{ animationDelay: project.animationDelay }}
             >
               {project.icon}
               <h3 className="text-xl font-semibold text-white mb-2">

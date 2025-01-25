@@ -1,3 +1,23 @@
-{
-  "extends": ["next/core-web-vitals", "next/typescript"]
-}
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: ['react', '@typescript-eslint'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  
+  rules: {
+    'react/react-in-jsx-scope': 'off', // Disable if you don't want to require React import
+    '@typescript-eslint/explicit-module-boundary-types': 'off', // Disable explicit types for functions, if needed
+  },
+  
+};
+

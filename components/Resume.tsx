@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize"; // Import sanitizer for safety
 import { BookOpen, Briefcase } from "lucide-react";

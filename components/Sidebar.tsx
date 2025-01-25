@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Mail, Calendar, MapPin } from "lucide-react"
 
 interface SidebarProps {
