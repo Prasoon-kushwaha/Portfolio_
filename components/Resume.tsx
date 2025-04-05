@@ -2,7 +2,7 @@
 
 import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize"; // Import sanitizer for safety
-import { BookOpen, Briefcase } from "lucide-react";
+import { BookOpen, Briefcase, Code } from "lucide-react";
 
 export default function Resume() {
   const education = [
@@ -61,6 +61,40 @@ export default function Resume() {
     },
   ];
 
+  const projects = [
+    {
+      title: "Crypto-Nexus App",
+      technologies: "React, Next.js, Tailwind CSS, Web-Sockets",
+      duration: "2025",
+      description: `
+- **Live Cryptocurrency Prices**: Bitcoin, Ethereum, and Solana with WebSocket updates
+- **Global Weather Data**: Current conditions for major cities
+- **Personalized News Feed**: Curated news based on your selected topics.
+- **Favorites System**: Bookmark your preferred cities and cryptos
+- **Dark/Light Mode**: Eye-friendly theme switching
+- **Real-time Updates**: Automatic data refresh without page reloads
+- **Interactive UI**: Smooth animations and transitions
+- **Github Repository**: [Prasoon-kushwaha/Crypto-Nexus](https://github.com/Prasoon-kushwaha/Crypto-Nexus)
+- **Live Demo**: [crypto-nexus-two.vercel.app](https://crypto-nexus-two.vercel.app/)`,
+    },
+    {
+      title: "Top-Scorer",
+      technologies: "React, Node.js, MongoDB, SocketIO, ExpressJS, JWT Auth",
+      duration: "2024",
+      description: `
+**Top Scorer** is a sports website developed to enhance the sports meet experience for inter-college events, such as Inter-IIIT or other sports fests. The website uses **Socket.IO** to provide real-time updates, improving engagement and accessibility for users.
+
+- **Match Winning Prediction**
+- **Real-Time Chat Functionality** for authenticated users
+
+Top Scorer manages data related to participants, matches, and scores, allowing efficient tracking of top performers across various sports. The platform supports real-time interactions, making it an ideal solution for live sports events.
+- **Github Repository**: [Prasoon-kushwaha/top_scorer](https://github.com/Prasoon-kushwaha/top_scorer)
+- **Live Website**: [top-scorer-ecru.vercel.app](top-scorer-ecru.vercel.app)`,
+
+    },
+   
+  ];
+
   return (
     <div className="p-6 md:p-8 animate-fade-in">
       <header className="mb-12">
@@ -102,7 +136,7 @@ export default function Resume() {
       </section>
 
       {/* Experience Section */}
-      <section className="relative">
+      <section className="mb-20 relative">
         <div className="flex items-center gap-4 mb-8 animate-slide-in" style={{ animationDelay: "0.5s" }}>
           <Briefcase className="text-[#ffd700] w-6 h-6" />
           <h3 className="text-2xl font-bold text-white">Experience</h3>
@@ -127,6 +161,40 @@ export default function Resume() {
                     rehypePlugins={[rehypeSanitize]}
                   >
                     {exp.description}
+                  </ReactMarkdown>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="relative">
+        <div className="flex items-center gap-4 mb-8 animate-slide-in" style={{ animationDelay: "0.9s" }}>
+          <Code className="text-[#ffd700] w-6 h-6" />
+          <h3 className="text-2xl font-bold text-white">Projects</h3>
+        </div>
+
+        <div className="absolute left-2.5 top-[4.5rem] bottom-0 w-px bg-[#333] md:left-[2.25rem]" />
+        <div className="space-y-8 border-b border-[#333] pb-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="relative pl-8 md:pl-12 animate-scale-in"
+              style={{ animationDelay: `${1.0 + index * 0.1}s` }}
+            >
+              <div className="absolute left-0 top-3 w-5 h-5 rounded-full border-4 border-[#2f2f2f] bg-[#ffd700] md:left-[1.75rem]" />
+              <div className="bg-[#2f2f2f] rounded-xl p-6 border-b border-[#333]">
+                <h4 className="text-l font-semibold text-white mb-1">{project.title}</h4>
+                <span className="text-[#ffd700] mb-2 block">{project.technologies}</span>
+                <span className="text-gray-400 italic mb-2 block">{project.duration}</span>
+                {project.description && (
+                  <ReactMarkdown
+                    className="text-gray-400 prose prose-invert"
+                    rehypePlugins={[rehypeSanitize]}
+                  >
+                    {project.description}
                   </ReactMarkdown>
                 )}
               </div>
